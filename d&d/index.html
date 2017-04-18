@@ -1,0 +1,1860 @@
+
+<!-- saved from url=(0041)http://giessy.ddns.net/webpage/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1, maximun-scale = 1">
+<script src="./js/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/style2.css">
+<script src="./js/script.js"></script>
+<script src="./js/hover.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body onload="startup();">   
+
+  <div class="container-fluid" style="background-color:lightgrey;padding:50px 100px;" >
+    <h1>BBB</h1>
+    <p>AAAAAAAAAAAAA</p>
+    <div class="form-group">
+
+      <form>
+        <div class="row row-0">
+          <span></span>
+        </div>
+        <div class="row row-1 col-md-12" style="background-color:lightgrey;">
+          <div class="col-md-6">
+            <input type="text" data-toggle="tooltip" title="Hooray!" class="form-control" id="character_name_input" placeholder="Enter character name">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="player_name_input" placeholder="Enter player name">
+            <label>NAME</label>
+          </div>
+        </div>
+
+        <div class="row row-2 col-md-12">
+         <div class="field_wrapper col-md-6">
+          <div class="row">
+            <div class="col-md-7">
+              <input type="text" class="form-control" id="character_class" placeholder="Enter character name">
+              <label>NAME</label>
+            </div>
+            <div class="col-md-3">
+              <input type="number" class="form-control" id="character_lv" onclick="addSkillPont()" placeholder="Enter character Na">
+              <label>NA</label>
+            </div>
+            <div class="col-md-2">
+              <a href="javascript:void(0);" class="add_button" title="Add field"><i class="glyphicon glyphicon-plus"> </i></a>   
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <input class="form-control" id="ex1" type="text" placeholder="Enter etnicity">
+          <label>NAME</label>
+        </div>
+        <div class="col-md-2 styled-select">
+
+         <select class="form-control"  id="sel1">
+          <option value="">0</option>
+          <option value="LG">1</option>
+          <option value="LN">2L</option>
+          <option value="LE">3L</option>
+          <option value="NG">4</option>
+          <option value="NN">5</option>
+          <option value="NE">6</option>
+          <option value="CG">7</option>
+          <option value="CN">0</option>
+          <option value="CE">9</option>
+<!--           <option value="">ALIGNMENT</option>
+               <option value="LG">LAWFUL GOOD</option>
+               <option value="LN">LAWFUL NEUTRAL</option>
+               <option value="LE">LAWFUL EVIL</option>
+               <option value="NG">NEUTRAL GOOD</option>
+               <option value="NN">NEUTRAL NEUTRAL</option>
+               <option value="NE">NEUTRAL EVIL</option>
+               <option value="CG">CHAOTIC GOOD</option>
+               <option value="CN">CHAOTIC NEUTRAL</option>
+               <option value="CE">CHAOTIC EVIL</option>-->
+             </select>
+
+           </div>
+
+           <div class="col-md-2">
+            <input class="form-control" id="ex3" type="text" placeholder="Enter state">
+            <label>NAME</label>
+          </div>
+        </div>
+
+        <div class="row row-3 col-md-12" style="padding-top: 10px;">
+
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="character_size" placeholder="size"> 
+            <label>NAME</label>
+          </div>
+
+          <div class="col-md-2">  
+            <input type="number" class="form-control" id="character_age" placeholder="age">
+            <label>NAME</label>
+          </div>
+
+          <div class="col-md-3">  
+            <input type="text" class="form-control" id="character_gender" placeholder="gender">
+            <label>NAME</label>
+          </div>
+
+          <div class="col-md-3">  
+            <input type="text" class="form-control" id="character_height" placeholder="hieght">
+            <label>NAME</label>
+          </div>
+        </div>
+        <div class="row row-4 col-md-12" style="padding-top: 10px;">         
+          <div class="col-md-3">  
+            <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-3">  
+            <input type="text" class="form-control" id="character_eyes" placeholder="eyes">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-3">  
+            <input type="text" class="form-control" id="character_hair" placeholder="hair">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-3">  
+            <input type="text" class="form-control" id="character_skin" placeholder="skin">
+            <label>NAME</label>
+          </div>
+        </div>
+
+
+        <div class="row row-5 col-md-12" style="background-color:lightgrey;">         
+          <div class="dropdown col-md-1">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#" onclick="standard3d6()" >HTML</a>
+              <a href="#" onclick="roll4d6()">CSS</a>
+              <a href="#" onclick="starting()">JavaScript</a>
+              <a href="#">CSS</a>
+              <a href="#">JavaScript</a>
+              <a href="#">CSS</a>
+              <a href="#">JavaScript</a>
+            </div>
+          </div>
+
+          <div class="col-md-2">  
+            <input type="number" class="form-control" id="character_skill_points" placeholder="weight">
+            <label>PENDING</label>
+          </div>
+
+          <div class="col-md-2">  
+            <input type="text" class="form-control" id="character_weight" placeholder="weight" readonly>
+            <label>SPENT</label>
+          </div>
+          <div class="col-md-2">  
+            <input type="text" class="form-control" id="character_eyes" placeholder="eyes">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-2">  
+            <input type="text" class="form-control" id="character_hair" placeholder="hair">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-2">  
+            <input type="text" class="form-control" id="character_skin" placeholder="skin">
+            <label>NAME</label>
+          </div>
+          <div class="col-md-1">  
+            <input type="text" class="form-control" id="character_skin" placeholder="skin">
+            <label>NAME</label>
+          </div>
+
+        </div>
+
+
+
+        <div class="row row-6 col-md-12" style="padding-top: 10px; background-color:lightgrey;">  
+          <div class="col-md-6"> 
+            <label>FEATS</label>
+          </div>
+          <div class="col-md-6"> 
+            <label>SKILL</label>
+          </div>
+        </div>
+
+        <div class="row row-7 col-md-12" style="background-color:lightgrey;">  
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-2"> 
+                <label>NAME</label>
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_str" placeholder="sr">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="sr">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="sr">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-2"> 
+                <label>NAME</label>
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_dex" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-2"> 
+                <label>NAME</label>
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_con" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-2"> 
+                <label>NAME</label>
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_int" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-2"> 
+                <label>NAME</label>
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_wis" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-2"> 
+                <label>NAME</label>
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_cha" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+
+            <div class="row" style="padding-top: 10px;">
+              <label>BBBBBBBBB</label>
+
+            </div>
+
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+            <div class="col-md-3"> 
+              <input type="text" class="form-control" id="character_weight" placeholder="weight">
+            </div>
+
+            <div class="row">
+              <label style="padding-top: 10px;">CCCCCCCCCCCCC</label>
+
+            </div>
+
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+              <div class="col-md-3"> 
+                <input type="text" class="form-control" id="character_weight" placeholder="weight">
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+          <div class="col-md-6"> 
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+            <div class="row" style="padding-top: 0px;">
+              <div class="col-md-2"> 
+                <label>AAAAAAA</label>
+              </div>
+              <div class="col-md-4"> 
+                <input type="text" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+              <div class="col-md-2"> 
+                <input type="number" class="form-control" id="" placeholder="weight">
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body></html>
