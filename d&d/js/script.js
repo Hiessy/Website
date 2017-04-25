@@ -12,15 +12,17 @@
  **/
 
  function startup(){
+ 	loadToolTip();
 
  	$(document).ready(function(){
     var maxField = 10; //Input fields increment limitation
     var addButton = $('.add_button'); //Add button selector
     var wrapper = $('.field_wrapper'); //Input field wrapper
-    var fieldHTML = '<div class="row"><div class="col-md-7"><input type="text" class="form-control" id="character_class" placeholder="Enter character class"></div><div class="col-md-3"><input type="number" class="form-control" id="character_lv" placeholder="Enter character level"></div><div class="col-md-1"><a href="javascript:void(0);" class="remove_button" title="remove field"><i class="glyphicon glyphicon-minus"> </i></a></div></div>'; //New input field html 
     var x = 1; //Initial field counter is 1
+    var fieldHTML = '';
     $(addButton).click(function(){ //Once add button is clicked
         if(x < maxField){ //Check maximum number of input fields
+        	fieldHTML = '<div class="row"><div class="col-xs-8"><input type="text" class="form-control" id="ch_class_'+x+'" placeholder="Enter character class"></div><div class="col-xs-2"><input type="number" class="form-control" id="ch_lv_'+x+'" placeholder=""></div><div class="col-xs-2"><a href="javascript:void(0);" class="remove_button" title="remove field"><i class="glyphicon glyphicon-minus"> </i></a></div></div>'; //New input field html 
             x++; //Increment field counter
             $(wrapper).append(fieldHTML); // Add field html
         }
@@ -34,9 +36,9 @@
 
  }
 
- function standard3d6() 
+ function roll3d6() 
  {
- 	document.getElementById("character_skill_points").value = Math.floor(document.getElementById("character_lv").value/4); 
+ 	document.getElementById("ch_ab_input").value = Math.floor(document.getElementById("ch_lv_0").value/4); 
  	document.getElementById("character_str").value = random3d6(); 
  	document.getElementById("character_dex").value = random3d6(); 
  	document.getElementById("character_con").value = random3d6(); 
@@ -47,7 +49,7 @@
 
  function roll4d6() 
  {
- 	document.getElementById("character_skill_points").value = Math.floor(document.getElementById("character_lv").value/4); 
+ 	document.getElementById("ch_ab_input").value = Math.floor(document.getElementById("ch_lv_0").value/4); 
  	document.getElementById("character_str").value = random3d6(); 
  	document.getElementById("character_dex").value = random3d6(); 
  	document.getElementById("character_con").value = random3d6(); 
@@ -55,6 +57,16 @@
  	document.getElementById("character_wis").value = random3d6(); 
  	document.getElementById("character_cha").value = random3d6(); 
  }
+
+function highPower()
+{
+
+}
+
+function roll5d6()
+{
+
+}
 
  function starting() 
  {
@@ -65,16 +77,16 @@
  	document.getElementById("character_int").value = 10; 
  	document.getElementById("character_wis").value = 10; 
  	document.getElementById("character_cha").value = 10; 
- 	document.getElementById("character_skill_points").value = 20 + Math.floor(document.getElementById("character_lv").value/4); 
+ 	document.getElementById("character_skill_points").value = 20 + Math.floor(document.getElementById("ch_lv_0").value/4); 
 
  }
 
  function addSkillPont()
  {
 
-document.getElementById("character_lv").value
+ 	document.getElementById("ch_lv_0").value
  }
-//RANDOM ROLLING FUNCTIONS
+//RANDOM ROLLING FUNCTIONS PARAMETRIZAR ESTO
 function random3d6()
 {
 	return (Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1));
@@ -88,6 +100,8 @@ function random4d6()
 	var sum = die.reduce(function(pv, cv) { return pv + cv; }, 0);
 	return sum - min;
 }
+
+
 
 /*function setchoice_ida(num){
 	console.log(num);

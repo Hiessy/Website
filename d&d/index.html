@@ -1,1858 +1,1415 @@
 
 <!-- saved from url=(0041)http://giessy.ddns.net/webpage/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale = 1, maximun-scale = 1">
-<script src="./js/jquery-3.2.1.min.js"></script>
-<link rel="stylesheet" href="./css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="./css/style2.css">
-<script src="./js/script.js"></script>
-<script src="./js/hover.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/style2.css">
+	<script src="./js/script.js"></script>
+	<script src="./js/hover.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
 </head>
 
 <body onload="startup();">   
 
-  <div class="container-fluid" style="background-color:lightgrey;padding:50px 100px;" >
-    <h1>BBB</h1>
-    <p>AAAAAAAAAAAAA</p>
-    <div class="form-group">
+	<div class="container-fluid" style="background-color:lightgrey;padding:00px 10px;" >
+		<h1>D&D</h1>
+		<p>CHARACTER SHEET</p>
+		<div class="">
 
-      <form>
-        <div class="row row-0">
-          <span></span>
-        </div>
-        <div class="row row-1 col-md-12" style="background-color:lightgrey;">
-          <div class="col-md-6">
-            <input type="text" data-toggle="tooltip" title="Hooray!" class="form-control" id="character_name_input" placeholder="Enter character name">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-6">
-            <input type="text" class="form-control" id="player_name_input" placeholder="Enter player name">
-            <label>NAME</label>
-          </div>
-        </div>
+			<form>
+				<div class="row row-0">					
+				</div>
 
-        <div class="row row-2 col-md-12">
-         <div class="field_wrapper col-md-6">
-          <div class="row">
-            <div class="col-md-7">
-              <input type="text" class="form-control" id="character_class" placeholder="Enter character name">
-              <label>NAME</label>
-            </div>
-            <div class="col-md-3">
-              <input type="number" class="form-control" id="character_lv" onclick="addSkillPont()" placeholder="Enter character Na">
-              <label>NA</label>
-            </div>
-            <div class="col-md-2">
-              <a href="javascript:void(0);" class="add_button" title="Add field"><i class="glyphicon glyphicon-plus"> </i></a>   
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <input class="form-control" id="ex1" type="text" placeholder="Enter etnicity">
-          <label>NAME</label>
-        </div>
-        <div class="col-md-2 styled-select">
+				<div class="row row-1 col-md-12">
+					<div class="col-xs-6">
+						<input type="text" title="Enter a name for your character. Ej: Eidric the Red" class="form-control" id="ch_nm_input" placeholder="Enter character name">
+						<label>Character Name</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="text" class="form-control" title="Enter your name. Ej: Sebastian" id="pl_nm_input" placeholder="Enter player name">
+						<label>Player Name</label>
+					</div>
+				</div>
 
-         <select class="form-control"  id="sel1">
-          <option value="">0</option>
-          <option value="LG">1</option>
-          <option value="LN">2L</option>
-          <option value="LE">3L</option>
-          <option value="NG">4</option>
-          <option value="NN">5</option>
-          <option value="NE">6</option>
-          <option value="CG">7</option>
-          <option value="CN">0</option>
-          <option value="CE">9</option>
-<!--           <option value="">ALIGNMENT</option>
-               <option value="LG">LAWFUL GOOD</option>
-               <option value="LN">LAWFUL NEUTRAL</option>
-               <option value="LE">LAWFUL EVIL</option>
-               <option value="NG">NEUTRAL GOOD</option>
-               <option value="NN">NEUTRAL NEUTRAL</option>
-               <option value="NE">NEUTRAL EVIL</option>
-               <option value="CG">CHAOTIC GOOD</option>
-               <option value="CN">CHAOTIC NEUTRAL</option>
-               <option value="CE">CHAOTIC EVIL</option>-->
-             </select>
+				<div class="row row-2 col-md-12">
+					<div class="field_wrapper col-xs-6">
+						<div class="row">
+							<div class="col-xs-8">
+								<input type="text" class="form-control" id="ch_class_0" placeholder="Select a character class">
+								<label>Class</label>
+							</div>
+							<div class="col-xs-2">
+								<input type="number" class="form-control" id="ch_lv_0" onclick="addSkillPont()">
+								<label>Level</label>
+							</div>
+							<div class="col-xs-2">
+								<a href="javascript:void(0);" class="add_button" id="add_class_btn" title="Add field"><i class="glyphicon glyphicon-plus"> </i></a>   
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<input class="form-control" id="ex1" type="text" placeholder="Select a race">
+						<label>Race</label>
+					</div>
+					<div class="col-xs-2 styled-select">
+						<select class="form-control"  id="al_select">
+							<option value="">Choose your Alignment</option>
+							<option value="LG">LAWFUL GOOD</option>
+							<option value="LN">LAWFUL NEUTRAL</option>
+							<option value="LE">LAWFUL EVIL</option>
+							<option value="NG">NEUTRAL GOOD</option>
+							<option value="NN">NEUTRAL NEUTRAL</option>
+							<option value="NE">NEUTRAL EVIL</option>
+							<option value="CG">CHAOTIC GOOD</option>
+							<option value="CN">CHAOTIC NEUTRAL</option>
+							<option value="CE">CHAOTIC EVIL</option>
+						</select>
+					</div>
 
-           </div>
+					<div class="col-xs-2">
+						<input class="form-control" id="dt_input" type="text" placeholder="Enter state">
+						<label>Deity</label>
+					</div>
+				</div>
 
-           <div class="col-md-2">
-            <input class="form-control" id="ex3" type="text" placeholder="Enter state">
-            <label>NAME</label>
-          </div>
-        </div>
+				<div class="row row-3 col-md-12" style="padding-top: 10px;">
 
-        <div class="row row-3 col-md-12" style="padding-top: 10px;">
+					<div class="col-xs-1">
+						<input type="text" class="form-control" id="ch_sz_input" placeholder="size"> 
+						<label>Size</label>
+					</div>
 
-          <div class="col-md-4">
-            <input type="text" class="form-control" id="character_size" placeholder="size"> 
-            <label>NAME</label>
-          </div>
+					<div class="col-xs-1">  
+						<input type="number" class="form-control" id="ch_age_input" placeholder="age">
+						<label>Age</label>
+					</div>
 
-          <div class="col-md-2">  
-            <input type="number" class="form-control" id="character_age" placeholder="age">
-            <label>NAME</label>
-          </div>
+					<div class="col-xs-2">  
+						<input type="text" class="form-control" id="ch_gd_input" placeholder="gender">
+						<label>Gender</label>
+					</div>
 
-          <div class="col-md-3">  
-            <input type="text" class="form-control" id="character_gender" placeholder="gender">
-            <label>NAME</label>
-          </div>
+					<div class="col-xs-1">  
+						<input type="text" class="form-control" id="ch_ht_input" placeholder="height">
+						<label>Height</label>
+					</div>
+					<div class="col-xs-1">  
+						<input type="text" class="form-control" id="ch_wt_input" placeholder="weight">
+						<label>Weight</label>
+					</div>
+					<div class="col-xs-2">  
+						<input type="text" class="form-control" id="ch_ey_input" placeholder="eyes">
+						<label>Eye color</label>
+					</div>
+					<div class="col-xs-2">  
+						<input type="text" class="form-control" id="ch_hr_input" placeholder="hair">
+						<label>Hair color</label>
+					</div>
+					<div class="col-xs-2">  
+						<input type="text" class="form-control" id="ch_sn_input" placeholder="skin">
+						<label>Skin color</label>
+					</div>
+				</div>
 
-          <div class="col-md-3">  
-            <input type="text" class="form-control" id="character_height" placeholder="hieght">
-            <label>NAME</label>
-          </div>
-        </div>
-        <div class="row row-4 col-md-12" style="padding-top: 10px;">         
-          <div class="col-md-3">  
-            <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-3">  
-            <input type="text" class="form-control" id="character_eyes" placeholder="eyes">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-3">  
-            <input type="text" class="form-control" id="character_hair" placeholder="hair">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-3">  
-            <input type="text" class="form-control" id="character_skin" placeholder="skin">
-            <label>NAME</label>
-          </div>
-        </div>
+				<div class="row row-4 col-md-12" style="padding-top: 10px;">         
+				</div>
 
 
-        <div class="row row-5 col-md-12" style="background-color:lightgrey;">         
-          <div class="dropdown col-md-1">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-              <a href="#" onclick="standard3d6()" >HTML</a>
-              <a href="#" onclick="roll4d6()">CSS</a>
-              <a href="#" onclick="starting()">JavaScript</a>
-              <a href="#">CSS</a>
-              <a href="#">JavaScript</a>
-              <a href="#">CSS</a>
-              <a href="#">JavaScript</a>
-            </div>
-          </div>
+				<div class="row row-5 col-md-12" style="background-color:lightgrey;">         
+					<div class="dropdown col-xs-2">
+						<button class="dropbtn">Stat generator</button>
+						<div class="dropdown-content">
+							<a onclick="roll3d6()" data-toggle="tooltip" title="Three six sided die one for each stat.">Standard</a>
+							<a onclick="roll4d6()">4d6 best 3</a>
+							<a onclick="roll5d6()">5d6 best 3</a>
+							<a onclick="starting()">Point Buy</a>
+							<a onclick="highPower()">High Power Campaign</a>
+						</div>
+					</div>
 
-          <div class="col-md-2">  
-            <input type="number" class="form-control" id="character_skill_points" placeholder="weight">
-            <label>PENDING</label>
-          </div>
+					<div class="col-xs-1">  
+						<input type="text" class="form-control" id="ch_ab_input" placeholder="" readonly>
+						<label>AP</label>
+					</div>
 
-          <div class="col-md-2">  
-            <input type="text" class="form-control" id="character_weight" placeholder="weight" readonly>
-            <label>SPENT</label>
-          </div>
-          <div class="col-md-2">  
-            <input type="text" class="form-control" id="character_eyes" placeholder="eyes">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-2">  
-            <input type="text" class="form-control" id="character_hair" placeholder="hair">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-2">  
-            <input type="text" class="form-control" id="character_skin" placeholder="skin">
-            <label>NAME</label>
-          </div>
-          <div class="col-md-1">  
-            <input type="text" class="form-control" id="character_skin" placeholder="skin">
-            <label>NAME</label>
-          </div>
+					<div class="col-xs-1">  
+						<input type="text" class="form-control" id="character_weight" placeholder="" readonly>
+						<label>Spent AP</label>
+					</div>
+					<div class="col-md-8">  
+					</div>
+				</div>
 
-        </div>
+				<div class="row row-6 col-md-12" style="background-color:lightgrey;">  
 
+					<div class="col-xs-6">
+						<label>Abilities</label>
+						<div class="row row-str">
+							<div class="col-xs-1">
+								<label title="Strenght">STR</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_str_input" placeholder="starting">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_str_bonus_input" placeholder="bonus">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_str_value_input" placeholder="value">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_str_tmp_input" placeholder="temp">
+							</div>
+							<div class="col-xs-2"> 
+								<div class="col-xs-6">
+									<a  class="plus_button" id="plus_ab_btn" title="Add Point"><i class="glyphicon glyphicon-plus"> </i></a>   
+								</div>
+								<div class="col-xs-6">
+									<a  class="minus_button" id="minus_ab_btn" title="Subtract Point"><i class="glyphicon glyphicon-minus"> </i></a>   
+								</div>
+							</div>
+						</div>
+						<div class="row row-dex" style="padding-top: 10px;">
+							<div class="col-xs-1"> 
+								<label title="Dexterity">DEX</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_dex_input" placeholder="starting">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_dex_bonus_input" placeholder="bonus">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_dex_value_input" placeholder="value">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_dex_tmp_input" placeholder="temp">
+							</div>
+							<div class="col-xs-2"> 
+								<div class="col-xs-6">
+									<a  class="plus_button" id="plus_ab_btn" title="Add Point"><i class="glyphicon glyphicon-plus"> </i></a>   
+								</div>
+								<div class="col-xs-6">
+									<a  class="minus_button" id="minus_ab_btn" title="Subtract Point"><i class="glyphicon glyphicon-minus"> </i></a>   
+								</div>
+							</div>
+						</div>
+						<div class="row row-con" style="padding-top: 10px;">
+							<div class="col-xs-1"> 
+								<label title="Constitution">CON</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_con_input" placeholder="starting">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_con_bonus_input" placeholder="bonus">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_con_value_input" placeholder="value">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_con_tmp_input" placeholder="temp">
+							</div>
+							<div class="col-xs-2"> 
+								<div class="col-xs-6">
+									<a  class="plus_button" id="plus_ab_btn" title="Add Point"><i class="glyphicon glyphicon-plus"> </i></a>   
+								</div>
+								<div class="col-xs-6">
+									<a  class="minus_button" id="minus_ab_btn" title="Subtract Point"><i class="glyphicon glyphicon-minus"> </i></a>   
+								</div>
+							</div>
+						</div>
+						<div class="row row-int" style="padding-top: 10px;">
+							<div class="col-xs-1"> 
+								<label title="Inteligence">INT</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_int_input" placeholder="starting">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_int_bonus_input" placeholder="bonus">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_int_value_input" placeholder="value">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_int_tmp_input" placeholder="temp">
+							</div>
+							<div class="col-xs-2"> 
+								<div class="col-xs-6">
+									<a  class="plus_button" id="plus_ab_btn" title="Add Point"><i class="glyphicon glyphicon-plus"> </i></a>   
+								</div>
+								<div class="col-xs-6">
+									<a  class="minus_button" id="minus_ab_btn" title="Subtract Point"><i class="glyphicon glyphicon-minus"> </i></a>   
+								</div>
+							</div>
+						</div>
+						<div class="row row-wis" style="padding-top: 10px;">
+							<div class="col-xs-1"> 
+								<label title="Winsdom">WIS</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_wis_input" placeholder="starting">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_wis_bonus_input" placeholder="bonus">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_wis_value_input" placeholder="value">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_wis_tmp_input" placeholder="temp">
+							</div>
+							<div class="col-xs-2"> 
+								<div class="col-xs-6">
+									<a  class="plus_button" id="plus_ab_btn" title="Add Point"><i class="glyphicon glyphicon-plus"> </i></a>   
+								</div>
+								<div class="col-xs-6">
+									<a  class="minus_button" id="minus_ab_btn" title="Subtract Point"><i class="glyphicon glyphicon-minus"> </i></a>   
+								</div>
+							</div>
+						</div>
+						<div class="row row-cha" style="padding-top: 10px;">
+							<div class="col-xs-1"> 
+								<label title="Charisma">CHA</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_cha_input" placeholder="starting">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_cha_bonus_input" placeholder="bonus">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_cha_value_input" placeholder="value">
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="ch_cha_tmp_input" placeholder="temp">
+							</div>
+							<div class="col-xs-2"> 
+								<div class="col-xs-6">
+									<a class="plus_button" id="plus_ab_btn" title="Add Point"><i class="glyphicon glyphicon-plus"> </i></a>   
+								</div>
+								<div class="col-xs-6">
+									<a  class="minus_button" id="minus_ab_btn" title="Subtract Point"><i class="glyphicon glyphicon-minus"> </i></a>   
+								</div>
+							</div>
+						</div>
 
-
-        <div class="row row-6 col-md-12" style="padding-top: 10px; background-color:lightgrey;">  
-          <div class="col-md-6"> 
-            <label>FEATS</label>
-          </div>
-          <div class="col-md-6"> 
-            <label>SKILL</label>
-          </div>
-        </div>
-
-        <div class="row row-7 col-md-12" style="background-color:lightgrey;">  
-
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-2"> 
-                <label>NAME</label>
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_str" placeholder="sr">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="sr">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="sr">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-2"> 
-                <label>NAME</label>
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_dex" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-2"> 
-                <label>NAME</label>
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_con" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-2"> 
-                <label>NAME</label>
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_int" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-2"> 
-                <label>NAME</label>
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_wis" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-2"> 
-                <label>NAME</label>
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_cha" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-
-            <div class="row" style="padding-top: 10px;">
-              <label>BBBBBBBBB</label>
-
-            </div>
-
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-            <div class="col-md-3"> 
-              <input type="text" class="form-control" id="character_weight" placeholder="weight">
-            </div>
-
-            <div class="row">
-              <label style="padding-top: 10px;">CCCCCCCCCCCCC</label>
-
-            </div>
-
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 10px;">
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-              <div class="col-md-3"> 
-                <input type="text" class="form-control" id="character_weight" placeholder="weight">
-              </div>
-            </div>
+						<div class="row" style="padding-top: 10px;">
+							<label class="col-xs-2">Saving Throws</label>
+							<label class="col-xs-1">Total</label>
+							<label class="col-xs-1">Base</label>
+							<label class="col-xs-1">Mod</label>
+							<label class="col-xs-1">M.Mod</label>
+							<label class="col-xs-1">Misc</label>
+							<label class="col-xs-1">Temp</label>
+						</div>
 
 
-
-          </div>
-
-
-          <div class="col-md-6"> 
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 0px;">
-              <div class="col-md-2"> 
-                <label>AAAAAAA</label>
-              </div>
-              <div class="col-md-4"> 
-                <input type="text" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-              <div class="col-md-2"> 
-                <input type="number" class="form-control" id="" placeholder="weight">
-              </div>
-            </div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-2"> 
+								<label title="Fortitude">FORTITUDE</label>
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="fort_ab_tot_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="fort_ab_bas_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="fort_ab_mod_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="fort_ab_mmod_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="fort_ab_misc_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="fort_ab_temp_input" placeholder="">
+							</div>
+						</div>
 
 
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-2"> 
+								<label title="Reflex">REFLEX</label>
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="ref_ab_tot_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="ref_ab_bas_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="ref_ab_mod_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="ref_ab_mmod_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="ref_ab_misc_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="ref_ab_temp_input" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-2"> 
+								<label title="Will Power">WILLPOWER</label>
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="wil_ab_tot_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="wil_ab_bas_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="wil_ab_mod_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="wil_ab_mmod_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="wil_ab_misc_input" placeholder="">
+							</div>
+							<div class="col-xs-1" style="width: 70px;"> 
+								<input type="text" class="form-control" id="wil_ab_temp_input" placeholder="">
+							</div>
+						</div>
+
+						<div class="row">
+							<label style="padding-top: 10px;">CCCCCCCCCCCCC</label>
+						</div>
+
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+							<div class="col-xs-3"> 
+								<input type="text" class="form-control" id="character_weight" placeholder="weight">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6">
+						<div class="row" style="padding-top: 28px;">
+							<div class="col-xs-1"> 
+								<label>HP</label>
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="hp_input" placeholder="Total">
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="hp_actual_input" placeholder="actual">
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="hp_lethal_input" placeholder="lethal">
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="speed_input" placeholder="speed">
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-1"> 
+								<label>AC</label>
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="ac_input" placeholder="total" value="10">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;">
+								<input type="text" class="form-control" id="armor_bonus_input" placeholder="armor">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;">
+								<input type="text" class="form-control" id="dex_bonus_input" placeholder="dex bonus">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;">
+								<input type="text" class="form-control" id="size_input" placeholder="size">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;"> 								
+								<input type="text" class="form-control" id="natural_input" placeholder="natural">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;"> 								
+								<input type="text" class="form-control" id="misc_input" placeholder="misc">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-xs-2"> 
+								<label title="Touch">Touch</label>
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="touch_input" placeholder="total" value="">
+							</div>
+
+							<div class="col-xs-3" style="width: 95px;">
+								<label title="Flat Footed">Flat Footed</label>
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;">
+								<input type="text" class="form-control" id="flat_footed_input" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label title="Initiative">Initiative</label>
+							</div>
+							<div class="col-xs-2" style="width: 95px;"> 
+								<input type="text" class="form-control" id="ac_input" placeholder="total" value="10">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;">
+								<input type="text" class="form-control" id="armor_bonus_input" placeholder="armor">
+							</div>
+
+							<div class="col-xs-2" style="width: 95px;">
+								<input type="text" class="form-control" id="dex_bonus_input" placeholder="dex bonus">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 40px;">
+							<div class="col-xs-5"> 
+								<label>Skill Name</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>Ability</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>Skill</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>Mod</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>Ranks</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>Misc</label>
+							</div>
+						</div>
 
 
-          </div>
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>APPRAICE &#9632</label>
+							</div>
+							<div class="col-xs-3"> 
+								<label></label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="appr_skill_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="appr_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="appr_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="appr_misc_mod" placeholder="">
+							</div>
+						</div>
 
-        </div>
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>BALANCE &#9632</label>
+							</div>
+							<div class="col-xs-3">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="bal_skill_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="bal_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="bal_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="bal_misc_mod" placeholder="">
+							</div>
+						</div>
 
-      </form>
-    </div>
-  </div>
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>BLUFF &#9632</label>
+							</div>
+							<div class="col-xs-3"> 
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="blu_skill_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="blu_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="blu_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="blu_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>CLIMB &#9632</label>
+							</div>
+							<div class="col-xs-3"> 
+							</div>
+							<div class="col-xs-1"> 
+								<label>STR*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cli_skill_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cli_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cli_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cli_misc_mod" placeholder="">
+							</div>
+						</div>
+
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>CONCENTRATION</label>
+							</div>
+							<div class="col-xs-3"> 
+								<label>&#9632</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>CON</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="con_skill_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="con_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="con_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="con_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>CRAFT &#9632</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="" placeholder="" value="">				
+							</div>
+							<div class="col-xs-1">
+								<a href="javascript:void(0);" class="" id="" title=""><i class="glyphicon glyphicon-plus"> </i></a>   
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cra_skill_mod_0" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cra_abi_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cra_rank_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="cra_misc_mod_0" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>DECIPHER SCRIPT</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dec_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dec_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dec_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dec_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>DIPLOMACY &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dip_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dip_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dip_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dip_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-1"> 
+								<label>DISABLE</label>
+							</div>
+							<div class="col-xs-4">
+								<label>DEVICE</label>
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>DISGUISE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="dis_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>ESCAPE ARTIST &#9632</label>
+							</div>
+							<div class="col-xs-1">
+
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="esc_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="esc_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="esc_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="esc_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>FORGERY &#9632</label>
+							</div>
+							<div class="col-xs-1">
+
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="for_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="for_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="for_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="for_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>GATHER INFORMATION &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="gin_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="gin_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="gin_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="gin_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>HANLDE ANIMAL</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="han_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="han_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="han_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="han_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>HEAL &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>WIS</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hea_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hea_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hea_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hea_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>HIDE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hid_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hid_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hid_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="hid_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>INTIMIDATE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="int_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="int_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="int_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="int_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>JUMP &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>STR*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="jum_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="jum_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="jum_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="jum_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>KNOWLEDGE</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="" placeholder="" value="">				
+							</div>
+							<div class="col-xs-1">
+								<a href="javascript:void(0);" class="" id="" title=""><i class="glyphicon glyphicon-plus"> </i></a>   
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="kno_skill_mod_0" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="kno_abi_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="kno_rank_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="kno_misc_mod_0" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>LISTEN &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>WIS</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="lis_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="lis_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="lis_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="lis_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>MOVE SILENTLY &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>OPEN LOCK</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="opl_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="opl_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="opl_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="opl_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>PERFORM</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="" placeholder="" value="">				
+							</div>
+							<div class="col-xs-1">
+								<a href="javascript:void(0);" class="" id="" title=""><i class="glyphicon glyphicon-plus"> </i></a>   
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="per_skill_mod_0" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="per_abi_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="per_rank_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="per_misc_mod_0" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-2"> 
+								<label>PROFESSION</label>
+							</div>
+							<div class="col-xs-2"> 
+								<input type="text" class="form-control" id="" placeholder="" value="">				
+							</div>
+							<div class="col-xs-1">
+								<a href="javascript:void(0);" class="" id="" title=""><i class="glyphicon glyphicon-plus"> </i></a>   
+							</div>
+							<div class="col-xs-1"> 
+								<label>WIS</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="pro_skill_mod_0" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="pro_abi_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="pro_rank_mod_0" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="pro_misc_mod_0" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>RIDE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="rid_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="rid_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="rid_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="rid_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SEARCH &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sea_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sea_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sea_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sea_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SENSE MOTIVE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>WIS</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sem_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sem_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sem_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sem_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SLEIGHT OF HAND</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="soh_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="soh_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="soh_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="soh_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SPELLCRAFT &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>INT</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="mos_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SPOT &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>WIS</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="spo_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="spo_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="spo_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="spo_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SURVIVAL &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>WIS</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sur_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sur_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sur_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="sur_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>SWIM &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>STR*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="swi_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="swi_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="swi_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="swi_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>TUMBLE</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX*</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="tum_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="tum_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="tum_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="tum_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>USE MAGIC DEVICE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>CHA</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="umd_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="umd_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="umd_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="umd_misc_mod" placeholder="">
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 0px;">
+							<div class="col-xs-4"> 
+								<label>USE ROPE &#9632</label>
+							</div>
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-1"> 
+								<label>DEX</label>
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="uro_skill_mod" placeholder="">
+							</div>							
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="uro_abi_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="uro_rank_mod" placeholder="">
+							</div>
+							<div class="col-xs-1"> 
+								<input type="text" class="form-control skill_class" id="uro_misc_mod" placeholder="">
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
 </div>
 
 </div>
